@@ -1,7 +1,7 @@
 const cardsContainer = document.getElementById("cards-container");
 const searchinput = document.getElementById("news-input");
 const searchbtn = document.getElementById("search-button");
-console.log(searchinput);
+// console.log(searchinput);
 function reload(){
     window.location.reload();
 }
@@ -12,7 +12,7 @@ window.addEventListener("load", () => fetchNews("Canada"));
 
 async function fetchNews(query) {
   // e.preventDefault();
-  const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`;
+  const url = `http://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`;
   const response = await fetch(url);
   // console.log(response);
   const data = await response.json();
